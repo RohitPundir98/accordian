@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "What is the difference between `==` and `===` in JavaScript?",
+    "answer": "`==` is the loose equality operator, which checks for equality after type coercion, meaning it converts the values to the same type before comparing them. `===` is the strict equality operator, which checks for equality without type conversion, so both the value and the type must be the same."
+  },
+  {
+    "id": 2,
+    "question": "What is the purpose of the `let` keyword in JavaScript, and how does it differ from `var`?",
+    "answer": "The `let` keyword declares a block-scoped local variable, optionally initializing it to a value. Unlike `var`, `let` does not hoist to the top of the block and has a scope limited to the block in which it is defined, preventing common bugs related to variable hoisting and global namespace pollution."
+  },
+  {
+    "id": 3,
+    "question": "How does JavaScript handle asynchronous operations, and what are Promises?",
+    "answer": "JavaScript handles asynchronous operations using callbacks, Promises, and async/await. Promises are objects representing the eventual completion or failure of an asynchronous operation, allowing for chaining operations and handling asynchronous code in a more readable and manageable way than nested callbacks."
+  },
+  {
+    "id": 4,
+    "question": "Can you explain the concept of closures in JavaScript and provide an example?",
+    "answer": "Closures are functions that retain access to their lexical scope, even when the function is executed outside that scope. For example:\n ```javascript\n function outerFunction(outerVariable) {\n     return function innerFunction(innerVariable) {\n         console.log('Outer Variable: ' + outerVariable);\n         console.log('Inner Variable: ' + innerVariable);\n     };\n }\n const newFunction = outerFunction('outside');\n newFunction('inside');\n ```\n Here, `innerFunction` has access to `outerVariable` even after `outerFunction` has finished executing."
+  },
+  {
+    "id": 5,
+    "question": "What are JavaScript modules, and why are they important in modern web development?",
+    "answer": "JavaScript modules are reusable pieces of code that can be exported from one script and imported for use in another. They help organize and manage code, promote code reuse, and maintain separation of concerns. ES6 introduced the `import` and `export` syntax, making module usage more standardized and easier to work with in modern web development."
+  },
+  {
+    "id": 6,
+    "question": "What is event delegation in JavaScript, and how does it improve performance?",
+    "answer": "Event delegation is a technique where a single event listener is added to a parent element instead of multiple listeners to individual child elements. When an event occurs, the listener on the parent handles it by checking the event's target property. This improves performance by reducing the number of event listeners and memory usage, especially useful for dynamic content where child elements may be frequently added or removed."
+  },
+  {
+    "id": 7,
+    "question": "How does the `this` keyword work in JavaScript, and how is its value determined?",
+    "answer": "The `this` keyword refers to the context in which a function is executed. Its value is determined by how a function is called. In a method, `this` refers to the object the method belongs to. In a function, `this` refers to the global object in non-strict mode or `undefined` in strict mode. Arrow functions inherit `this` from the surrounding lexical context."
+  },
+  {
+    "id": 8,
+    "question": "What are JavaScript's `async` and `await` keywords, and how do they simplify working with Promises?",
+    "answer": "`async` and `await` are used to handle asynchronous operations more conveniently. An `async` function returns a Promise, and the `await` keyword pauses the function execution until the Promise is resolved, making asynchronous code look and behave more like synchronous code. This helps improve code readability and maintainability by avoiding complex Promise chains and nested callbacks."
+  },
+  {
+    "id": 9,
+    "question": "Can you describe the event loop in JavaScript and its role in non-blocking I/O operations?",
+    "answer": "The event loop is a mechanism that enables JavaScript to perform non-blocking I/O operations despite being single-threaded. It continuously checks the call stack and the task queue. When the call stack is empty, it processes the tasks in the queue, allowing asynchronous code (like timers, network requests) to execute without blocking the main thread, thus improving performance and responsiveness."
+  },
+  {
+    "id": 10,
+    "question": "What is the difference between `null` and `undefined` in JavaScript, and when should each be used?",
+    "answer": "`null` is an assigned value representing the intentional absence of any object value. `undefined` means a variable has been declared but not assigned a value. `null` is used when you want to explicitly indicate that a variable should have no value, while `undefined` typically indicates an uninitialized variable or missing parameter."
+  }
+]
